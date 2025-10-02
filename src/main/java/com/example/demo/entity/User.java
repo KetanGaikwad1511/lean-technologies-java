@@ -22,7 +22,7 @@ public class User {
         this.email = builder.email;
         this.password = builder.password;
     }
-@Id
+     @Id
     Long userId;
     String firstName;
     String middleName;

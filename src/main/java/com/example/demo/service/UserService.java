@@ -13,19 +13,16 @@ public class UserService {
 
     @Autowired
     UserRepository userRepository;
-
-
     public UserDTO getAllUser(){
 
         List<User> user = userRepository.findAll();
-if(!user.isEmpty()) {
-    return new UserDTO.Builder()
+        if(!user.isEmpty()) {
+            return new UserDTO.Builder()
             .userId(user.get(0).getUserId())
             .firstName(user.get(0).getFirstName())
             .lastName(user.get(0).getLastName())
             .build();
-}
-return new UserDTO.Builder().build();
-    }
-
+        }
+         return new UserDTO.Builder().build();
+        }
 }

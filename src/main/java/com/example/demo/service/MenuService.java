@@ -15,4 +15,18 @@ public class MenuService {
    public List<MenuEntity> getAllMenu(){
        return menuRepository.findAll();
    }
+
+
+    public MenuEntity addData() {
+
+       MenuEntity menuEntity = new MenuEntity();
+
+       menuEntity.setMenuId(3);
+       menuEntity.setMenuName("About");
+       menuEntity.setMenuDescription("About Desc");
+
+       menuRepository.save(menuEntity);
+
+       return menuEntity;
+    }
 }

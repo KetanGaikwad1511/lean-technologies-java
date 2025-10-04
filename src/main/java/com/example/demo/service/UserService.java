@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.dto.UserDTO;
-import com.example.demo.entity.User;
+import com.example.demo.entity.UserEntity;
 import com.example.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ public class UserService {
     UserRepository userRepository;
     public UserDTO getAllUser(){
 
-        List<User> user = userRepository.findAll();
+        List<UserEntity> user = userRepository.findAll();
         if(!user.isEmpty()) {
             return new UserDTO.Builder()
             .userId(user.get(0).getUserId())
@@ -26,7 +26,7 @@ public class UserService {
          return new UserDTO.Builder().build();
         }
 
-    public User addUser(User user) {
+    public UserEntity addUser(UserEntity user) {
        return userRepository.save(user);
     }
 }

@@ -17,16 +17,8 @@ public class MenuService {
    }
 
 
-    public MenuEntity addData() {
+    public MenuEntity addData(MenuEntity menu) {
 
-       MenuEntity menuEntity = new MenuEntity();
-
-       menuEntity.setMenuId(3);
-       menuEntity.setMenuName("About");
-       menuEntity.setMenuDescription("About Desc");
-
-       menuRepository.save(menuEntity);
-
-       return menuEntity;
+       return menuRepository.save(menu);
     }
 }

@@ -3,17 +3,16 @@ package com.example.demo.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Builder;
 import lombok.Data;
 
 @Entity
 @Data
 @Table(name = "user_details")
-public class User {
-    public User() {
+public class UserEntity {
+    public UserEntity() {
     }
 
-    private User(Builder builder) {
+    private UserEntity(Builder builder) {
         this.userId = builder.userId;
         this.firstName = builder.firstName;
         this.middleName = builder.middleName;
@@ -40,12 +39,12 @@ public class User {
         String email;
         String password;
 
-        public User build() {
+        public UserEntity build() {
             // Optional: Add validation logic here before building the Product
             if (userId==null) {
                 throw new IllegalArgumentException("User Id cannot be null or empty.");
             }
-            return new User(this);
+            return new UserEntity(this);
         }
     }
 

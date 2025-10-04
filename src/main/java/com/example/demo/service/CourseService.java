@@ -16,4 +16,17 @@ public class CourseService {
     public List<CourseEntity> getAllCourseDetails(){
          return courseRepository.findAll();
     }
+
+    public CourseEntity addCourse(CourseEntity course) {
+
+        return courseRepository.save(course);
+    }
+
+    public CourseEntity updateCourse(CourseEntity course) {
+        return courseRepository.save(course);
+    }
+
+    public void deleteRecord(Integer courseId) {
+         courseRepository.deleteById(courseId);
+    }
 }

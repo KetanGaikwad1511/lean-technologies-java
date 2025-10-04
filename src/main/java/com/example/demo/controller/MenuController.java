@@ -17,9 +17,9 @@ MenuService menuService;
         return menuService.getAllMenu();
     }
 
-        @PostMapping("/add")
-    public MenuEntity saveMenu(){
-        return menuService.addData();
+    @PostMapping("/add")
+    public MenuEntity saveMenu( @RequestBody MenuEntity menu){
+        return menuService.addData(menu);
     }
 
 }

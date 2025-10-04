@@ -25,4 +25,8 @@ public class UserService {
         }
          return new UserDTO.Builder().build();
         }
+
+    public User addUser(User user) {
+       return userRepository.save(user);
+    }
 }

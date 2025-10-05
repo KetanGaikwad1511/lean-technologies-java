@@ -1,0 +1,29 @@
+5 oct 2025
+menu update API - santoshi
+menu delete API - namrata
+user uppdate API -santoshi
+user delete API - namrata
+
+
+
+
+setup -
+santoshi - jdk
+namrata - sql
+bhagyashi - setup
+pratik - sql
+anjali - setup
+
+jdk install  --  open command promt --- run command java --version
+maven install--  open command promt --- run command maven --version
+sql server , ssms ( sql server management studio )
+git
+postman
+intelij idea community edition
+
+
+take clone of project , then import it into intelij
+
+
+
+

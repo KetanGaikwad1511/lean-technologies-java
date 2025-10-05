@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 
+import com.example.demo.dto.CourseDTO;
 import com.example.demo.entity.CourseEntity;
 import com.example.demo.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,12 @@ public class CourseController {
     public List<CourseEntity> getCourseDetails(){
          return courseService.getAllCourseDetails();
     }
+
+    @GetMapping("/getCourseFilter")
+    public List<CourseDTO> getFilterCourse(){
+        return courseService.getFilterCourseDetails();
+    }
+
 
 
     @PostMapping("/addCourse")

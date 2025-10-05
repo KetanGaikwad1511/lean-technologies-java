@@ -16,6 +16,6 @@ public class MenuEntity {
     int menuId;
     String menuName;
     String menuDescription;
-
+    String routerLink;
 
 }

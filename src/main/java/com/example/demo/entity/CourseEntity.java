@@ -13,4 +13,5 @@ public class CourseEntity {
     int courseId;
     String courseName;
     String courseDescription;
+    String courseType;
 }

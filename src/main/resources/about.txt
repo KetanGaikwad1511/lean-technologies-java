@@ -25,5 +25,17 @@ intelij idea community edition
 take clone of project , then import it into intelij
 
 
+------------------------------------------------------------------------
+
+java core -
+ object ,class, interface
+ oops - inheritance , encapsulation , abstraction, polymorphism
+ exception handling
+ collections framework - list ,set, map
+ multithreading
+
+
+
+
 
 

@@ -1,8 +1,6 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -22,6 +20,7 @@ public class UserEntity {
         this.password = builder.password;
     }
      @Id
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long userId;
     String firstName;
     String middleName;
